@@ -7,11 +7,16 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
+    <!-- ℹ️ 'defer: true' means that the loading of this line can be done later -->
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="col-sm-8 offset-sm-2">
+        <%= yield %>
+      </div>
+    </div>
   </body>
+
 </html>
